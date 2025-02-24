@@ -7,11 +7,18 @@ This is a simple yet advanced to-do list application built with HTML, CSS, and J
 
 
 ✅ Add, edit, and remove tasks
+
+
 ✔️ Mark tasks as completed
+
 💾 Store tasks in local storage for persistence across sessions
+
 📱 Responsive design for a seamless experience on both desktop and mobile devices
+
 🎨 Simple and clean user interface
+
 ⚙️ Technologies Used
+
 
 HTML: Used to structure the app's content.
 CSS: Styled the app for a clean and modern interface, utilizing Flexbox and media queries for responsiveness.
