@@ -1,14 +1,11 @@
 :root {
-  --gradient: linear-gradient(
-    180deg,
-    rgba(77, 45, 72, 0.8) 0%,
-    #aa8dd8 100%
-  );
+  --background-color: #0f081b; 
+  --gradient: linear-gradient(180deg, var(--background-color) 0%, var(--background-color) 50%);
   --dark: #bc89da;
   --grey: #a190bd;
   --grey-border: rgba(210, 210, 210, 0.75);
   --grey-light: #eeeeee;
-  --grey-dark: $405175;
+  --grey-dark: #405175;
   --blue: #945ec0;
   --green: #229e81;
   --white: #ffffff;
@@ -22,7 +19,9 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  transition: background 0.5s ease-in-out;
 }
+
 
 .btn {
   color: var(--white);
@@ -66,7 +65,7 @@ p {
   height: 50%;
   width: 60%;
   box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
-  max-width: 30rem;
+  max-width: 40rem;
 }
 
 .todo-container {
@@ -175,11 +174,15 @@ input[type="checkbox"]:checked::before {
   height: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: var(--grey);
 }
 
+
 .counter-container p {
-  align-self: center;
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
 }
 
 .counter-container button {
@@ -233,4 +236,43 @@ input[type="checkbox"]:checked::before {
   cursor: pointer;
   color: #b82121;
   font-weight: 400;
+  font-size: 14px;
+}
+#deleteButton{  
+  font-size: 14px;
+}
+
+#todoCount{
+  font-size: 16px;
+  font-weight: bold;
+  color: red
+}
+
+
+
+#theme-color{
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  background: transparent;
+}
+
+#theme-color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+#theme-color::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.theme-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-size: 14px;
 }

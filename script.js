@@ -120,3 +120,24 @@ function saveToLocalStorage() {
 
 
 
+const colorPicker = document.getElementById("theme-color");
+
+// Function to apply and save the selected color
+function changeBackgroundColor(color) {
+    document.documentElement.style.setProperty("--background-color", color); // Update CSS variable
+    localStorage.setItem("themeColor", color); // Save color preference
+}
+
+// Load saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedColor = localStorage.getItem("themeColor");
+    if (savedColor) {
+        document.documentElement.style.setProperty("--background-color", savedColor);
+        colorPicker.value = savedColor; // Set picker to saved color
+    }
+});
+
+// Event listener for color change
+colorPicker.addEventListener("input", (event) => {
+    changeBackgroundColor(event.target.value);
+});
